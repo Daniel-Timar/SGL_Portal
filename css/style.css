@@ -59,7 +59,7 @@ ul {
 }
 
 .section .container {
-  padding-top: 60px;
+  padding-top: 40px;
   padding-bottom: 70px;
 }
 
@@ -250,7 +250,7 @@ ul {
   margin-right: 15px;
 }
 
-/* home */
+/* home and sunsystems*/
 .home {
   min-height: 100vh;
   display: flex;
@@ -409,4 +409,78 @@ h3.my-profession {
 .cassiopae .cassiopae-content .timeline a:hover::before {
   transform-origin: left;
   transform: scaleX(1);
+}
+
+/* SunSystems */
+.sunsystems {
+  min-height: 100vh;
+  display: flex;
+  color: black;
+}
+
+.sunsystems .sunsystems-info {
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+
+.sunsystems .sunsystems-img {
+  flex: 0 0 40%;
+  max-width: 40%;
+  text-align: center;
+  position: relative;
+  display: flex;
+}
+
+.sunsystems .sunsystems-img img {
+  height: 300px;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.sunsystems-info p {
+  margin-bottom: 70px;
+  font-size: 20px;
+  color: var(--text-black-700);
+}
+
+/* Transfer */
+.transfer .transfer-content {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.transfer .transfer-content .intern,
+.transfer .transfer-content .extern {
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin-top: 30px;
+}
+
+.transfer .transfer-content .b-object {
+  max-width: 100%;
+  margin-top: 30px;
+}
+
+.transfer .transfer-content h3.title {
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: var(--bg-black-100);
+}
+
+.transfer .transfer-content .timeline-box {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.transfer .transfer-content .timeline {
+  background-color: rgb(216, 215, 215);
+  padding: 30px 15px;
+  border: 1px solid var(--bg-black-50);
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
