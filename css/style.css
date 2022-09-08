@@ -383,7 +383,7 @@ h3.my-profession {
 }
 
 .cassiopae .cassiopae-content .timeline .item .icon i {
-  color: red;
+  color: var(--skin-color);
 }
 
 .cassiopae .cassiopae-content .timeline a {
