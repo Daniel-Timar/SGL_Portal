@@ -37,6 +37,34 @@ ul {
   display: block;
   padding: 0 30px;
   opacity: 1;
+  position: fixed;
+  left: 270px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.3 ease;
+}
+
+.section.back-section {
+  z-index: 1;
+}
+
+.section.active {
+  z-index: 2;
+  opacity: 1;
+  animation: slideSection 1s ease;
+}
+
+@keyframes slideSection {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 .hidden {
@@ -141,6 +169,7 @@ ul {
   top: 0;
   height: 100%;
   z-index: 10;
+  transition: all 0.3 ease;
 }
 
 .aside .logo {
@@ -180,7 +209,7 @@ ul {
   top: 0;
   right: 0;
 }
-
+/* 
 .aside .nav-toggler {
   height: 40px;
   width: 45px;
@@ -194,6 +223,7 @@ ul {
   display: none;
   justify-content: center;
   align-items: center;
+  transition: all 0.3 ease;
 }
 
 .aside .nav-toggler span {
@@ -222,7 +252,7 @@ ul {
   position: absolute;
   top: -6px;
   left: 0;
-}
+} */
 
 .aside .nav {
   margin-top: 50px;
@@ -336,11 +366,6 @@ h3.my-profession {
   margin-top: 30px;
 }
 
-.cassiopae .cassiopae-content .b-object {
-  max-width: 100%;
-  margin-top: 30px;
-}
-
 .cassiopae .cassiopae-content h3.title {
   font-size: 24px;
   margin-bottom: 30px;
@@ -444,6 +469,7 @@ h3.my-profession {
 }
 
 /* Transfer */
+
 .transfer .transfer-content {
   flex: 0 0 100%;
   max-width: 100%;
@@ -460,13 +486,6 @@ h3.my-profession {
   max-width: 100%;
   margin-top: 30px;
 }
-
-/* .transfer .transfer-content h3.title {
-  font-size: 24px;
-  margin-bottom: 30px;
-  font-weight: 700;
-  color: var(--bg-black-100);
-} */
 
 .transfer .transfer-content .timeline-box {
   flex: 0 0 100%;
@@ -499,6 +518,13 @@ h3.my-profession {
   transition: all 1s ease-in-out;
 }
 
+.transfer .transfer-content .transfer-list {
+  list-style: square;
+}
+.transfer .transfer-content .transfer-list li {
+  margin-bottom: 5px;
+}
+
 .transfer .transfer-content .timeline .title-extern {
   background: linear-gradient(
       0deg,
@@ -515,6 +541,9 @@ h3.my-profession {
   padding: 20px 50px 30px 50px;
   background-color: #ffffff;
   transition: all 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .transfer .transfer-content .timeline .description h4 {
@@ -543,8 +572,172 @@ h3.my-profession {
 }
 
 .transfer .transfer-content .timeline .description .link {
-  padding-top: 20px;
-  padding-left: 50px;
+  background-color: black;
+  /* border: 2px solid black; */
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: var(--skin-color);
+  cursor: pointer;
+  /* margin-top: 20px; */
+  margin: auto;
+  padding: 0 5px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  height: 40px;
+  min-width: 0;
+  outline: none;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 50%;
+  will-change: transform;
 }
 
-/**/
+.transfer .transfer-content .timeline .description .link:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.transfer .transfer-content .timeline .description .link:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+/* Bussines Objects */
+.b-objects .b-objects-content {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.b-objects .b-objects {
+  display: flex;
+  flex-direction: row;
+}
+
+.b-objects .b-objects .row {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.b-objects .b-objects-content .timeline-box {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.b-objects .b-objects-content .timeline {
+  background-color: rgb(216, 215, 215);
+  padding: 30px 15px;
+  border: 1px solid var(--bg-black-50);
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.b-objects .b-objects-content .timeline .item {
+  background-color: rgb(155, 155, 155);
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.b-objects .b-objects-content .timeline .item .icon {
+  display: flex;
+  background: #000000;
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid #504e70;
+}
+
+.b-objects .b-objects-content .timeline .item .icon i {
+  color: var(--skin-color);
+}
+
+.b-objects .b-objects-content .timeline a {
+  color: var(--bg-black-100);
+  position: relative;
+  text-decoration: none;
+}
+
+.b-objects .b-objects-content .timeline a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #000000;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.b-objects .b-objects-content .timeline a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.b-objects-img {
+  position: relative;
+  width: 700px;
+  height: 700px;
+  background: grey;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar {
+  width: 60px;
+  height: 100px;
+  background-color: green;
+  left: 50px;
+  bottom: 300px;
+  margin-left: 10px;
+  position: absolute;
+  animation: fill 5s infinite alternate, colors 5s infinite alternate;
+}
+
+.bar.fill1 {
+  animation: fill-1 5s infinite alternate, colors 5s infinite alternate;
+}
+
+@keyframes fill {
+  0% {
+    height: 0;
+  }
+  33% {
+    height: 30px;
+  }
+  66% {
+    height: 10px;
+  }
+  100% {
+    height: 105px;
+  }
+}
+
+@keyframes fill-1 {
+  0% {
+    height: 0;
+  }
+  33% {
+    height: 50px;
+  }
+  66% {
+    height: 20px;
+  }
+  100% {
+    height: 130px;
+  }
+}
