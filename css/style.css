@@ -316,6 +316,7 @@ h3.my-profession {
   margin-bottom: 70px;
   font-size: 20px;
   color: var(--text-black-700);
+  text-align: justify;
 }
 
 .home .home-img {
@@ -471,6 +472,7 @@ h3.my-profession {
   margin-bottom: 70px;
   font-size: 20px;
   color: var(--text-black-700);
+  text-align: justify;
 }
 
 /* Transfer */
@@ -633,6 +635,7 @@ h3.my-profession {
   margin-bottom: 70px;
   font-size: 20px;
   color: var(--text-black-700);
+  text-align: justify;
 }
 
 .b-objects .b-objects-content .timeline {
