@@ -401,14 +401,14 @@ h3.my-profession {
 
 .cassiopae .cassiopae-content .timeline .item .icon {
   display: flex;
-  background: #000000;
+  background: var(--skin-color);
   padding: 10px;
   border-radius: 50%;
-  border: 1px solid #504e70;
+  border: 2px solid #000000;
 }
 
 .cassiopae .cassiopae-content .timeline .item .icon i {
-  color: var(--skin-color);
+  color: var(--bg-black-50);
 }
 
 .cassiopae .cassiopae-content .timeline a {
@@ -437,18 +437,21 @@ h3.my-profession {
 }
 
 /* SunSystems */
-.sunsystems {
+.sunsystems,
+.e-sign {
   min-height: 100vh;
   display: flex;
   color: black;
 }
 
-.sunsystems .sunsystems-info {
+.sunsystems .sunsystems-info,
+.e-sign .e-sign-info {
   flex: 0 0 60%;
   max-width: 60%;
 }
 
-.sunsystems .sunsystems-img {
+.sunsystems .sunsystems-img,
+.e-sign .e-sign-img {
   flex: 0 0 40%;
   max-width: 40%;
   text-align: center;
@@ -456,13 +459,15 @@ h3.my-profession {
   display: flex;
 }
 
-.sunsystems .sunsystems-img img {
+.sunsystems .sunsystems-img img,
+.e-sign .e-sign-img img {
   height: 300px;
   margin: auto;
   border-radius: 5px;
 }
 
-.sunsystems-info p {
+.sunsystems-info p,
+.e-sign-info p {
   margin-bottom: 70px;
   font-size: 20px;
   color: var(--text-black-700);
@@ -516,6 +521,10 @@ h3.my-profession {
   background-size: cover;
   background-position: center;
   transition: all 1s ease-in-out;
+}
+
+.transfer .transfer-content .timeline .title h3 {
+  color: #ffffff;
 }
 
 .transfer .transfer-content .transfer-list {
@@ -572,11 +581,11 @@ h3.my-profession {
 }
 
 .transfer .transfer-content .timeline .description .link {
-  background-color: black;
+  background-color: var(--skin-color);
   /* border: 2px solid black; */
   border-radius: 15px;
   box-sizing: border-box;
-  color: var(--skin-color);
+  color: var(--bg-black-50);
   cursor: pointer;
   /* margin-top: 20px; */
   margin: auto;
@@ -614,20 +623,16 @@ h3.my-profession {
   max-width: 100%;
 }
 
-.b-objects .b-objects {
-  display: flex;
-  flex-direction: row;
-}
-
-.b-objects .b-objects .row {
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-}
-
 .b-objects .b-objects-content .timeline-box {
-  flex: 0 0 100%;
+  flex: 0 0 40%;
   max-width: 100%;
+  /* background-color: red; */
+}
+
+.b-objects .b-objects-content .timeline-box p {
+  margin-bottom: 70px;
+  font-size: 20px;
+  color: var(--text-black-700);
 }
 
 .b-objects .b-objects-content .timeline {
@@ -653,14 +658,14 @@ h3.my-profession {
 
 .b-objects .b-objects-content .timeline .item .icon {
   display: flex;
-  background: #000000;
+  background: var(--skin-color);
   padding: 10px;
   border-radius: 50%;
-  border: 1px solid #504e70;
+  border: 2px solid #000000;
 }
 
 .b-objects .b-objects-content .timeline .item .icon i {
-  color: var(--skin-color);
+  color: var(--bg-black-50);
 }
 
 .b-objects .b-objects-content .timeline a {
@@ -689,55 +694,77 @@ h3.my-profession {
 }
 
 .b-objects-img {
-  position: relative;
-  width: 700px;
-  height: 700px;
-  background: grey;
+  flex: 0 0 60%;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.bar {
+.b-objects-img img {
+  height: 400px;
+  width: 400px;
+}
+
+/* BRD Apps */
+.brd-apps .container {
+  padding-bottom: 40px;
+}
+
+.brd-apps .apps-item {
+  margin-bottom: 30px;
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+}
+
+.brd-apps .apps-item .apps-item-inner {
+  background-color: rgb(216, 215, 215);
+  border: 1px solid var(--bg-black-50);
+  border-radius: 10px;
+  padding: 20px 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.brd-apps .apps-item .apps-item-inner:hover {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+  cursor: pointer;
+}
+
+.brd-apps .apps-item .apps-item-inner .icon {
+  height: 60px;
   width: 60px;
-  height: 100px;
-  background-color: green;
-  left: 50px;
-  bottom: 300px;
-  margin-left: 10px;
-  position: absolute;
-  animation: fill 5s infinite alternate, colors 5s infinite alternate;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
-.bar.fill1 {
-  animation: fill-1 5s infinite alternate, colors 5s infinite alternate;
+.brd-apps .apps-item .apps-item-inner .icon .fa {
+  font-size: 40px;
+  line-height: 60px;
+  color: var(--skin-color);
+  transition: all 0.3s ease;
 }
 
-@keyframes fill {
-  0% {
-    height: 0;
-  }
-  33% {
-    height: 30px;
-  }
-  66% {
-    height: 10px;
-  }
-  100% {
-    height: 105px;
-  }
+.brd-apps .apps-item .apps-item-inner:hover .icon {
+  background: var(--skin-color);
 }
 
-@keyframes fill-1 {
-  0% {
-    height: 0;
-  }
-  33% {
-    height: 50px;
-  }
-  66% {
-    height: 20px;
-  }
-  100% {
-    height: 130px;
-  }
+.brd-apps .apps-item .apps-item-inner:hover .icon .fa {
+  font-size: 25px;
+  color: var(--bg-black-50);
+}
+
+.brd-apps .apps-item .apps-item-inner h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #000000;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.brd-apps .apps-item .apps-item-inner p {
+  font-size: 16px;
+  color: var(--text-black-700);
 }
